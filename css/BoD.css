@@ -1,0 +1,464 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f7f7f7;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+header .logo img {
+    max-height: 70px;
+    margin-right: 20px;
+}
+
+.menu-button {
+    display: none;
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.desktop-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+.desktop-nav ul li {
+    position: relative;
+}
+.desktop-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.desktop-nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0056b3;
+    padding: 10px 0;
+    border-radius: 5px;
+    min-width: 180px;
+}
+.desktop-nav ul li:hover > ul {
+    display: block;
+}
+.desktop-nav ul li ul li a {
+    display: block;
+    white-space: nowrap;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+.desktop-nav ul li ul li a:hover {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.desktop-nav ul li a.membership {
+    background-color: #007bff;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+.desktop-nav ul li a.donate {
+    background-color: #ed272a;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+.desktop-nav ul li a.membership:hover {
+    background-color: #0056b3;
+}
+.desktop-nav ul li a.donate:hover {
+    background-color: #b8001c;
+}
+
+.hero-section {
+    background-image: url("../images/Famous\ Trestle\ Bridge.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-section .hero-content {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    z-index: 2;
+    text-align: left;
+    color: white;
+}
+
+.hero-section .hero-content h2 {
+    font-size: 4em;
+    margin: 0;
+    padding-left: 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.board-of-directors {
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.board-of-directors h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+.board-of-directors .directors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    font-family: "Raleway", sans-serif;
+}
+
+.board-of-directors .director {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.board-of-directors .director:hover {
+    transform: translateY(-5px);
+}
+
+.board-of-directors .director img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.board-of-directors .director h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.board-of-directors .director p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    color: #555;
+}
+
+.board-of-directors .director a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.board-of-directors .director a:hover {
+    text-decoration: underline;
+}
+
+.statement-of-principles {
+    background-color: #003b77;
+    color: white;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 50px auto;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.statement-of-principles h2 {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.statement-of-principles .divider {
+    width: 35rem;
+    height: 4px;
+    margin: 10px 0 30px 0;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.statement-of-principles p {
+    margin-bottom: 40px;
+    font-size: 1.2em;
+    font-family: "Roboto", sans-serif;
+    width: 750px;
+    text-align: left;
+}
+
+.principles-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+}
+
+.principles-column {
+    flex: 1;
+}
+
+.principles-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.principles-column li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    position: relative;
+    padding-left: 60px;
+    line-height: 1.4;
+}
+
+.principles-column li .icon {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 2em;
+    color: white;
+}
+
+.membership-section {
+    background-color: #ffffff;
+    padding: 40px 60px;
+    margin: 30px auto;
+    max-width: 1100px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.membership-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 160px;
+}
+
+.content-column {
+    flex: 0 0 40%;
+    text-align: left;
+    line-height: 1.4;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+}
+
+.content-column h3 {
+    font-size: 2.8rem;
+    color: #184484;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.divider {
+    width: 100%;
+    height: 3px;
+    background-color: grey;
+    margin: 10px 0 20px 0;
+}
+
+.icon-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.icon-list li {
+    display: flex;
+    align-items: center;
+    color: #184484;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.icon-list i {
+    color: #184484;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 24px 48px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    font-size: 1.15rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .membership-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .content-column {
+        flex: 1;
+    }
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 100px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul.bold-links li a {
+    font-weight: bold;
+}
+
+.footer-links ul.regular-links li a {
+    font-weight: normal;
+}
+
+.footer-links ul li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-social a {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-social svg {
+    width: 24px;
+    height: 24px;
+    fill: white !important;
+    transition: fill 0.3s ease;
+}
+
+.footer-social i {
+    font-size: 1.5rem;
+    color: white !important;
+    transition: color 0.3s ease;
+}
+
+.footer-social svg:hover {
+    fill: #66b3ff !important;
+}
+
+.footer-social i:hover {
+    color: #66b3ff !important;
+}
+
+.footer-info {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #d9d9d9;
+}

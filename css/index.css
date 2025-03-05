@@ -1,0 +1,638 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f7f7f7;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+header .logo img {
+    max-height: 70px;
+    margin-right: 20px;
+}
+
+.menu-button {
+    display: none;
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.desktop-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+.desktop-nav ul li {
+    position: relative;
+}
+.desktop-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.desktop-nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0056b3;
+    padding: 10px 0;
+    border-radius: 5px;
+    min-width: 180px;
+}
+.desktop-nav ul li:hover > ul {
+    display: block;
+}
+.desktop-nav ul li ul li a {
+    display: block;
+    white-space: nowrap;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+.desktop-nav ul li ul li a:hover {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.desktop-nav ul li a.membership {
+    background-color: #007bff;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+.desktop-nav ul li a.donate {
+    background-color: #ed272a;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+.desktop-nav ul li a.membership:hover {
+    background-color: #0056b3;
+}
+.desktop-nav ul li a.donate:hover {
+    background-color: #b8001c;
+}
+
+.hero {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("../images/Rail\ View\ of\ Truss\ Bridge.png") no-repeat center
+            center/cover;
+    height: 80vh;
+    color: white;
+    display: flex;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 100vw;
+    align-items: center;
+    text-align: left;
+    padding: 60px 20px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+}
+
+.hero h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 1.1;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    display: block;
+    box-sizing: border-box;
+    width: auto;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
+    unicode-bidi: isolate;
+    margin: 0;
+    padding: 0;
+}
+
+.hero p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.1;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
+    margin-top: 20px;
+}
+
+.hero .buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero .buttons a {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    transition: background-color 0.3s;
+}
+
+.hero .buttons a:hover {
+    background-color: #002f5d;
+}
+
+.hero .buttons a.donate {
+    background-color: #ed272a;
+}
+
+.hero .buttons a.donate:hover {
+    background-color: #b8001c;
+}
+
+.youtube-section {
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    padding: 40px;
+    max-width: 1200px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.youtube-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/Suport\ Alberta.jpg") no-repeat center
+        center/cover;
+    z-index: 1;
+    opacity: 0.6;
+    filter: brightness(50%);
+    border-radius: 10px;
+}
+
+.youtube-section {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    padding: 40px;
+    max-width: 1100px;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+}
+
+.youtube-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.youtube-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.youtube-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.youtube-iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+}
+
+.voting-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.voting-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    background: url(../images/Famous\ Trestle\ Bridge.png) no-repeat center
+        center/cover;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.voting-container h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.voting-container .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.voting-container .card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.voting-container .buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.voting-container .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.voting-container .btn.yay {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+}
+
+.voting-container .btn.nay {
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+}
+
+.voting-container .btn.more {
+    background-color: #ddd;
+    color: black;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* 
+  1-second wave: 
+    - 0% to 50% = wave sweeps across 
+    - 50% to 100% = fully color 
+  Then we stop the animation, so the final color remains.
+*/
+
+/* Green wave (left-to-right) */
+@keyframes yayWave {
+    0% {
+        /* A thin green stripe at the left edge, rest white */
+        background: linear-gradient(to right, #4caf50 1%, #fff 1%);
+    }
+    50% {
+        /* Green sweeps across fully */
+        background: linear-gradient(to right, #4caf50 100%, #fff 0%);
+    }
+    100% {
+        /* End fully green */
+        background-color: #4caf50;
+    }
+}
+
+/* Red wave (right-to-left) */
+@keyframes nayWave {
+    0% {
+        background: linear-gradient(to left, #e74c3c 1%, #fff 1%);
+    }
+    50% {
+        background: linear-gradient(to left, #e74c3c 100%, #fff 0%);
+    }
+    100% {
+        background-color: #e74c3c;
+    }
+}
+
+/* Wave classes (duration = 1s) */
+.yay-wave {
+    animation: yayWave 1s ease forwards;
+}
+.nay-wave {
+    animation: nayWave 1s ease forwards;
+}
+
+/* Final color classes (stay that color) */
+.final-green {
+    background-color: #4caf50 !important;
+}
+.final-red {
+    background-color: #e74c3c !important;
+}
+
+.support-movement {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/Pump\ Jack.png") no-repeat center bottom/cover;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.support-movement h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 4rem;
+    text-align: left;
+    padding-left: 69px;
+    margin-bottom: 20px;
+}
+
+.support-movement p {
+    margin: 20px 0 40px;
+    text-align: left;
+    padding-left: 70px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.donation-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 2px;
+    justify-items: center;
+}
+
+.donation-buttons a {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: block;
+    width: 200px;
+}
+
+.donation-buttons a:hover {
+    background-color: #0056b3;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+.contact-info div {
+    background-color: #004080;
+    color: white;
+    padding: 20px;
+    flex: 1;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
+}
+
+.contact-info div i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+
+.contact-info i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #66b3ff;
+}
+
+.contact-info h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: "Tanseek Modern Arabic Medium", sans-serif;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #66b3ff;
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 100px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul.bold-links li a {
+    font-weight: bold;
+}
+
+.footer-links ul.regular-links li a {
+    font-weight: normal;
+}
+
+.footer-links ul li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-social a {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-social svg {
+    width: 24px;
+    height: 24px;
+    fill: white !important;
+    transition: fill 0.3s ease;
+}
+
+.footer-social i {
+    font-size: 1.5rem;
+    color: white !important;
+    transition: color 0.3s ease;
+}
+
+.footer-social svg:hover {
+    fill: #66b3ff !important;
+}
+
+.footer-social i:hover {
+    color: #66b3ff !important;
+}
+
+/* Popup overlay container (hidden by default) */
+.vote-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex; /* flex center the content */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* on top of everything */
+}
+
+/* The white box content */
+.vote-popup-content {
+    position: relative;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+}
+
+/* "X" close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* Hide element completely */
+.hidden {
+    display: none !important;
+}

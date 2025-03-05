@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /images/
+Allow: /
+
+Sitemap: https://lethbridgewestucp.ca/sitemap.xml

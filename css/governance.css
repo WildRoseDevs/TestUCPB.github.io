@@ -1,0 +1,304 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f7f7f7;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+header .logo img {
+    max-height: 70px;
+    margin-right: 20px;
+}
+
+.menu-button {
+    display: none;
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.desktop-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+.desktop-nav ul li {
+    position: relative;
+}
+.desktop-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.desktop-nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0056b3;
+    padding: 10px 0;
+    border-radius: 5px;
+    min-width: 180px;
+}
+.desktop-nav ul li:hover > ul {
+    display: block;
+}
+.desktop-nav ul li ul li a {
+    display: block;
+    white-space: nowrap;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+.desktop-nav ul li ul li a:hover {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.desktop-nav ul li a.membership {
+    background-color: #007bff;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+.desktop-nav ul li a.donate {
+    background-color: #ed272a;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+.desktop-nav ul li a.membership:hover {
+    background-color: #0056b3;
+}
+.desktop-nav ul li a.donate:hover {
+    background-color: #b8001c;
+}
+
+.hero-section {
+    background-image: url("../images/252_IMG_8273.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-section .hero-content {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    z-index: 2;
+    text-align: left;
+    color: white;
+}
+
+.hero-section .hero-content h2 {
+    font-size: 4em;
+    margin: 0;
+    padding-left: 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.governance-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.governance-summary .text-content {
+    flex: 0 0 63%;
+    padding-right: 30px;
+}
+
+.governance-summary .text-content h2 {
+    font-size: 4rem;
+    color: #184484;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.governance-summary .text-content .divider {
+    height: 3px;
+    width: 100%;
+    background-color: grey;
+    margin: 10px 0 20px;
+}
+
+.governance-summary .text-content .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.governance-summary .text-content .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.governance-summary .text-content .btn:hover {
+    background-color: #0056b3;
+}
+
+.governance-summary .image-container {
+    flex: 0 0 35%;
+    text-align: center;
+}
+
+.governance-summary .image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 100px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul.bold-links li a {
+    font-weight: bold;
+}
+
+.footer-links ul.regular-links li a {
+    font-weight: normal;
+}
+
+.footer-links ul li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-social a {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-social svg {
+    width: 24px;
+    height: 24px;
+    fill: white !important;
+    transition: fill 0.3s ease;
+}
+
+.footer-social i {
+    font-size: 1.5rem;
+    color: white !important;
+    transition: color 0.3s ease;
+}
+
+.footer-social svg:hover {
+    fill: #66b3ff !important;
+}
+
+.footer-social i:hover {
+    color: #66b3ff !important;
+}
+
+.footer-info {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #d9d9d9;
+}
