@@ -12,7 +12,7 @@
     .menu-button {
         display: block;
         width: 100%;
-        background-color: #004080;
+        background-color: #0320A5;
         color: white;
         padding: 10px;
         font-size: 1.2rem;
@@ -31,7 +31,7 @@
         opacity: 0;
         pointer-events: none;
         transition: transform 0.3s ease, opacity 0.3s ease;
-        background-color: #004080;
+        background-color: #0320A5;
         z-index: 1000;
         text-align: center;
         padding: 10px 0;
@@ -56,7 +56,7 @@
         text-decoration: none;
     }
 
-    .mobile-nav ul li a.membership {
+    .mobile-nav ul li a.join {
         background-color: #007bff;
         color: #fff;
         border-radius: 8px;
@@ -67,7 +67,7 @@
         padding: 12px;
     }
 
-    .mobile-nav ul li a.membership:hover {
+    .mobile-nav ul li a.join:hover {
         background-color: #0056b3;
     }
 

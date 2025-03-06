@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #004080;
+    background-color: #0320A5;
     color: white;
     padding: 10px 0;
     position: sticky;
@@ -94,7 +94,7 @@ header .logo img {
     border-radius: 5px;
 }
 
-.desktop-nav ul li a.membership {
+.desktop-nav ul li a.join {
     background-color: #007bff;
     border-radius: 8px;
     padding: 10px 15px;
@@ -104,7 +104,7 @@ header .logo img {
     border-radius: 8px;
     padding: 10px 15px;
 }
-.desktop-nav ul li a.membership:hover {
+.desktop-nav ul li a.join:hover {
     background-color: #0056b3;
 }
 .desktop-nav ul li a.donate:hover {
