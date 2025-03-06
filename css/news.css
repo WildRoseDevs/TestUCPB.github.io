@@ -1,20 +1,50 @@
-/* Hero section at top */
+/* --------------------------------------
+   HERO SECTION
+   -------------------------------------- */
 .news-hero {
-    text-align: center;
-    padding: 2rem;
-    background-color: #f5f5f5;
-}
-.news-hero h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-.news-hero .tagline {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: #666;
+    position: relative;
+    height: 80vh; /* bigger hero for a larger background image */
+    /* Use your desired background image; center/cover for full width */
+    background: url("../images/Great\ Plains\ in\ Alberta\ Canada\ stock\ photo.jpg")
+        no-repeat center center/cover;
+    color: #fff;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
 }
 
-/* 2-column layout */
+/* optional overlay to darken background for better text readability */
+.news-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.news-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    margin: 0; /* remove margin: 0 auto to keep it left-aligned */
+}
+
+.news-hero h1 {
+    font-size: 6rem; /* bigger heading */
+    margin-bottom: 1rem;
+}
+.news-hero .tagline {
+    font-size: 2rem;
+    font-style: italic;
+    color: #f0f0f0;
+}
+
+/* --------------------------------------
+     2-COLUMN LAYOUT (articles + sidebar)
+     -------------------------------------- */
 .news-container {
     display: flex;
     gap: 2rem;
@@ -30,34 +60,38 @@
     gap: 1rem;
 }
 
-/* Each article box is vertical: image at top, category label, snippet text */
-.news-box {
+/* --------------------------------------
+     HORIZONTAL ARTICLE BOXES
+     -------------------------------------- */
+.news-article {
+    display: flex; /* horizontal layout: image left, text right */
+    align-items: center; /* center the image and text vertically */
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 1.5rem;
     padding: 1rem;
 }
-
-/* The top thumbnail image */
-.news-box .box-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
+.article-image img {
+    /* Force symmetrical size for all article images */
+    width: 150px;
+    height: 100px;
+    object-fit: cover; /* ensures no distortion */
     border-radius: 4px;
-    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+}
+.article-content {
+    flex: 1;
 }
 
-/* The category label (Health, Economy, etc.) */
-.news-box .box-category {
-    font-size: 1rem;
+/* Category label (Health, Economy, etc.) */
+.category {
+    font-size: 0.9rem;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
-    color: #0320a5; /* default color */
+    margin-bottom: 0.3rem;
+    color: #0320a5;
 }
-/* If you want color-coded text: */
 .health {
     color: #3b82f6;
 }
@@ -71,29 +105,38 @@
     color: #9333ea;
 }
 
-/* The snippet text referencing date/coalition */
-.news-box .box-snippet {
+/* Article Title (h2) */
+.article-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: #333;
+}
+
+/* Snippet text referencing date/coalition */
+.article-content p {
     margin: 0;
+    font-weight: normal !important; /* Normal weight */
     font-size: 0.95rem;
     line-height: 1.4;
-    color: #333;
+    color: #666; /* lighter grey */
 }
 .read-more {
     font-weight: bold;
     text-decoration: none;
-    color: #0320a5;
+    color: #0071e2;
 }
 .read-more:hover {
     text-decoration: underline;
 }
 
-/* Load More button */
+/* LOAD MORE BUTTON */
 .load-more {
     text-align: center;
     margin: 2rem 0;
 }
 .load-more button {
-    background-color: #0320a5;
+    background-color: #0071e2;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -105,7 +148,9 @@
     background-color: #021675;
 }
 
-/* Sidebar */
+/* --------------------------------------
+     SIDEBAR
+     -------------------------------------- */
 .news-sidebar button {
     background-color: #eee;
     border: none;
@@ -121,7 +166,7 @@
     margin: 0.5rem 0;
     text-transform: uppercase;
     font-size: 0.9rem;
-    color: #0320a5;
+    color: #0071e2;
 }
 .news-sidebar form {
     display: flex;
@@ -135,7 +180,7 @@
     border-radius: 4px;
 }
 .news-sidebar button[type="submit"] {
-    background-color: #0320a5;
+    background-color: #0071e2;
     color: #fff;
     border: none;
     margin-top: 0.5rem;
@@ -152,39 +197,79 @@
     margin-bottom: 0.25rem;
 }
 
-/* Contact Info at bottom */
-.contact-info {
-    display: flex;
-    justify-content: space-around;
-    gap: 2rem;
-    padding: 2rem;
-    background-color: #f5f5f5;
-    margin-top: 2rem;
-}
-.info-box {
-    background-color: #0320a5;
-    color: #fff;
-    flex: 1;
-    padding: 1rem;
-    border-radius: 5px;
-    text-align: center;
-}
-.info-box h3 {
-    margin-bottom: 0.5rem;
-}
-.info-box p {
-    margin: 0;
-}
-.info-box a {
-    color: #fff;
-    text-decoration: none;
+footer {
+    background-color: #0071e2;
+    color: white;
+    /* Possibly some padding for top/bottom if you want more vertical space: */
+    padding: 20px 0;
 }
 
-/* Footer at bottom */
-footer {
-    background-color: #0320a5;
-    color: #fff;
-    padding: 1rem;
+/* The container that holds links, logo, social in one row */
+.footer-container {
+    position: relative; /* so we can absolutely position the logo */
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 80px; /* a consistent height so absolute positioning works */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* horizontal padding if needed */
+}
+
+/* Left column: existing link lists */
+.footer-links {
+    /* Keep your existing styling if you want them stacked or side by side */
+    display: flex;
+    gap: 100px; /* or whatever spacing */
+}
+
+/* Right column: social icons */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    /* They remain on the right thanks to 'justify-content: space-between' 
+       on .footer-container plus the next absolute. */
+}
+
+/* The center logo is absolutely positioned in the container */
+.footer-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* This ensures the logo is horizontally & vertically centered 
+       within the .footer-container. */
+}
+
+/* The logo image size */
+.footer-logo img {
+    max-width: 150px; /* or whatever size you want */
+    height: auto;
+    display: block;
+}
+
+/* Footer info below everything else (2nd row) */
+.footer-info {
     text-align: center;
-    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #d9d9d9;
+    margin-top: 20px;
+}
+
+/* --------------------------------------
+     BASIC RESPONSIVENESS
+     -------------------------------------- */
+@media (max-width: 768px) {
+    .news-container {
+        flex-direction: column;
+    }
+    .news-article {
+        flex-direction: column; /* stack image above text on small screens */
+    }
+    .article-image img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
 }
