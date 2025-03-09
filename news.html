@@ -25,14 +25,14 @@
       <!-- Logo -->
       <div class="logo">
         <a href="/">
-          <img src="images/ucp-logo-reverse-rgb.png" alt="UCP W-L Home" />
+          <img src="images/ucp-logo-reverse-rgb.png" alt="UCP W-L Home Media">
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
       <button class="menu-button" onclick="toggleMenu()">Menu</button>
 
-      <!-- Desktop Nav -->
+      <!-- Desktop Navigation -->
       <nav class="desktop-nav">
         <ul>
           <li><a href="/">Home</a></li>
@@ -41,7 +41,6 @@
             <ul>
               <li><a href="/board-of-directors">Board of Directors</a></li>
               <li><a href="/governance">Governance</a></li>
-              <li><a href="/news">News</a></li>
             </ul>
           </li>
           <li>
@@ -49,28 +48,27 @@
             <ul>
               <li><a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/"
                   target="_blank">Donate</a></li>
-              <li><a href="https://www.unitedconservative.ca/take-action/membership/" target="_blank">Membership</a>
-              </li>
-              <li><a href="https://www.unitedconservative.ca/strongandfreeclub/" target="_blank">Strong &amp; Free
-                  Club</a></li>
-              <li><a href="https://www.unitedconservative.ca/membership-check/" target="_blank">Membership Check</a>
-              </li>
+              <li><a href="https://www.unitedconservative.ca/take-action/membership/" target="_blank">join</a></li>
+              <li><a href="https://www.unitedconservative.ca/strongandfreeclub/" target="_blank">Strong
+                  and Free Club</a></li>
+              <li><a href="https://www.unitedconservative.ca/membership-check/" target="_blank">Join
+                  Check</a></li>
               <li><a href="https://www.unitedconservative.ca/petitions/volunteer/" target="_blank">Volunteer</a></li>
               <li><a href="https://www.unitedconservative.ca/petitions/subscribe/" target="_blank">Subscribe</a></li>
             </ul>
           </li>
           <li><a href="/events">Events</a></li>
 
-          <!-- Contact → Press -->
+          <!-- RENAMED: Contact → Press (dropdown) -->
           <li>
             <a href="#">Press</a>
             <ul>
-              <li><a href="/press/articles">Articles</a></li>
+              <li><a href="./news.html">Articles</a></li>
               <li><a href="/press/videos">Videos</a></li>
-              <li><a href="/press/forums">Forums</a></li>
             </ul>
           </li>
-          <!-- Membership → Join -->
+
+          <!-- RENAMED: Membership → Join -->
           <li>
             <a href="https://www.unitedconservative.ca/take-action/membership/" class="join" target="_blank">
               Join
@@ -85,7 +83,7 @@
         </ul>
       </nav>
 
-      <!-- Mobile Nav -->
+      <!-- Mobile Navigation -->
       <nav class="mobile-nav">
         <ul>
           <li><a href="/">Home</a></li>
@@ -93,18 +91,29 @@
           <li><a href="/governance">Governance</a></li>
           <li><a href="/news">News</a></li>
           <li><a href="/events">Events</a></li>
+
+          <!-- Contact → Press dropdown not typically shown in this older mobile approach,
+           but you could replicate if you wish. For simplicity, do a single link: -->
           <li>
             <a href="#">Press</a>
             <ul>
               <li><a href="/press/articles">Articles</a></li>
               <li><a href="/press/videos">Videos</a></li>
-              <li><a href="/press/forums">Forums</a></li>
             </ul>
           </li>
-          <li><a href="https://www.unitedconservative.ca/take-action/membership/" class="join" target="_blank">Join</a>
+
+          <!-- Renamed membership to join -->
+          <li>
+            <a href="https://www.unitedconservative.ca/take-action/membership/" class="join" target="_blank">
+              Join
+            </a>
           </li>
-          <li><a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/"
-              class="donate" target="_blank">Donate</a></li>
+          <li>
+            <a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/" class="donate"
+              target="_blank">
+              Donate
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -194,8 +203,9 @@
 
     <!-- RIGHT COLUMN: Sidebar -->
     <aside class="news-sidebar">
-      <button>Contact Us</button>
-      <button>Press Office UCP in Edmonton</button>
+      <!-- Matches your mock-up: top buttons, then newsletter, images, press archive -->
+      <button onclick="scrollToContact()">Contact Us</button>
+      <button>Press Articles</button>
       <button>Party Logo / link to news</button>
 
       <h3>Get the Newsletter</h3>
@@ -207,12 +217,13 @@
         <button type="submit">Submit</button>
       </form>
 
-      <h3>EVENTS this month</h3>
-      <ul>
-        <li>Event A - Feb 10</li>
-        <li>Event B - Feb 20</li>
-      </ul>
-
+      <!-- Four placeholders where "I" was in your design -->
+      <a href="/press/articles/trending-article-1">
+        <img src="./images/CGY-Leaders-Dinner-Event.jpg" alt="Sidebar Image 1" class="sidebar-image" />
+      </a>
+      <a href="/press/articles/trending-article-2">
+        <img src="./images/CGY-Leaders-Dinner-Event.jpg" alt="Sidebar Image 2" class="sidebar-image" />
+      </a>
       <button>Press Archive</button>
       <label for="select-month">Select Month</label>
       <select id="select-month">
@@ -223,17 +234,16 @@
     </aside>
   </section>
 
-  <!-- CONTACT INFO (BOTTOM) -->
   <section class="contact-info">
     <div>
-      <i class="fas fa-building"></i>
+      <i class="fas fa-building"></i> <!-- Address Icon -->
       <h3>Address</h3>
       <p>PO Box 513. Lethbridge, AB, T1J 3Z4</p>
     </div>
     <div>
-      <i class="fas fa-envelope"></i>
+      <i class="fas fa-envelope"></i> <!-- Email Icon -->
       <h3>Email</h3>
-      <p><a href="mailto:Lethbridge-West@unitedconservative.ca">Lethbridge-West@unitedconservative.ca</a></p>
+      <p><a href="mailto:Lethbridge-West@unitedconservative.ca ">Lethbridge-West@unitedconservative.ca </a></p>
     </div>
   </section>
 
@@ -245,13 +255,13 @@
           <li><a href="/">Home</a></li>
           <li><a href="/board-of-directors">About</a></li>
           <li><a href="/events">Events</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/press/articles">Press</a></li>
         </ul>
         <ul class="regular-links">
           <li><a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/">Donate</a>
           </li>
           <li><a href="https://www.unitedconservative.ca/petitions/volunteer/">Volunteer</a></li>
-          <li><a href="https://www.unitedconservative.ca/take-action/membership/">join</a></li>
+          <li><a href="https://www.unitedconservative.ca/take-action/membership/">Join</a></li>
           <li><a href="https://www.unitedconservative.ca/petitions/subscribe/">Subscribe</a></li>
         </ul>
       </div>
@@ -305,17 +315,11 @@
         }
       </style>
       <p>© 2025 UCP Lethbridge-West. All Rights Reserved.</p>
-      <p>
-        Created by
-        <a href="https://github.com/WildRoseDevs" target="_blank" style="text-decoration:none; color: white;">
-          <strong>Wild Rose Development</strong>
-        </a>
-      </p>
     </div>
   </footer>
 
-  <!-- Optional Scripts -->
   <script src="script.js"></script>
+  <script src="news.js"></script>
 </body>
 
 </html>
