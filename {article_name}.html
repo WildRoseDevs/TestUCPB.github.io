@@ -2,312 +2,325 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stay Connected - News</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Press: John Middleton-Hope Secures UCP Nomination</title>
 
-    <!-- Favicon / Fonts / CSS -->
-    <link rel="icon" href="images/favicon.ico" type="image/ico" />
-    <!-- Existing site CSS for header/nav -->
-    <link rel="stylesheet" href="./css/index.css" />
-    <!-- This page's layout -->
-    <link rel="stylesheet" href="./css/news.css" />
-    <!-- Responsive overrides (if needed) -->
-    <link rel="stylesheet" href="./css/responsive.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Favicon / Fonts / CSS -->
+  <link rel="icon" href="images/favicon.ico" type="image/ico" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/news.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
 <body>
-    <!-- HEADER / NAVBAR -->
-    <header>
-        <div class="container">
-            <!-- Logo -->
-            <div class="logo">
-                <a href="/">
-                    <img src="images/ucp-logo-reverse-rgb.png" alt="UCP W-L Home Media">
-                </a>
-            </div>
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <div class="container">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="/">
+          <img src="images/ucp-logo-reverse-rgb.png" alt="UCP W-L Home Media">
+        </a>
+      </div>
 
-            <!-- Mobile Menu Button -->
-            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+      <!-- Mobile Menu Button -->
+      <button class="menu-button" onclick="toggleMenu()">Menu</button>
 
-            <!-- Desktop Navigation -->
-            <nav class="desktop-nav">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li>
-                        <a href="#">About</a>
-                        <ul>
-                            <li><a href="/board-of-directors">Board of Directors</a></li>
-                            <li><a href="/governance">Governance</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Action Centre</a>
-                        <ul>
-                            <li><a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/"
-                                    target="_blank">Donate</a></li>
-                            <li><a href="https://www.unitedconservative.ca/take-action/membership/"
-                                    target="_blank">join</a></li>
-                            <li><a href="https://www.unitedconservative.ca/strongandfreeclub/" target="_blank">Strong
-                                    and Free Club</a></li>
-                            <li><a href="https://www.unitedconservative.ca/membership-check/" target="_blank">Join
-                                    Check</a></li>
-                            <li><a href="https://www.unitedconservative.ca/petitions/volunteer/"
-                                    target="_blank">Volunteer</a></li>
-                            <li><a href="https://www.unitedconservative.ca/petitions/subscribe/"
-                                    target="_blank">Subscribe</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/events">Events</a></li>
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="#">About</a>
+            <ul>
+              <li><a href="/board-of-directors">Board of Directors</a></li>
+              <li><a href="/governance">Governance</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Action Centre</a>
+            <ul>
+              <li>
+                <a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/" 
+                   target="_blank">Donate</a>
+              </li>
+              <li>
+                <a href="https://www.unitedconservative.ca/take-action/membership/" 
+                   target="_blank">join</a>
+              </li>
+              <li>
+                <a href="https://www.unitedconservative.ca/strongandfreeclub/" 
+                   target="_blank">Strong and Free Club</a>
+              </li>
+              <li>
+                <a href="https://www.unitedconservative.ca/membership-check/" 
+                   target="_blank">Join Check</a>
+              </li>
+              <li>
+                <a href="https://www.unitedconservative.ca/petitions/volunteer/" 
+                   target="_blank">Volunteer</a>
+              </li>
+              <li>
+                <a href="https://www.unitedconservative.ca/petitions/subscribe/" 
+                   target="_blank">Subscribe</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/events">Events</a></li>
 
-                    <!-- RENAMED: Contact → Press (dropdown) -->
-                    <li>
-                        <a href="#">Press</a>
-                        <ul>
-                            <li><a href="./news.html">Articles</a></li>
-                            <li><a href="/press/videos">Videos</a></li>
-                        </ul>
-                    </li>
+          <!-- Press -->
+          <li>
+            <a href="#">Press</a>
+            <ul>
+              <li><a href="./news.html">Articles</a></li>
+              <li><a href="/press/videos">Videos</a></li>
+            </ul>
+          </li>
 
-                    <!-- RENAMED: Membership → Join -->
-                    <li>
-                        <a href="https://www.unitedconservative.ca/take-action/membership/" class="join"
-                            target="_blank">
-                            Join
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/"
-                            class="donate" target="_blank">
-                            Donate
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Mobile Navigation -->
-            <nav class="mobile-nav">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/board-of-directors">Board of Directors</a></li>
-                    <li><a href="/governance">Governance</a></li>
-                    <li><a href="/news">News</a></li>
-                    <li><a href="/events">Events</a></li>
-
-                    <!-- Contact → Press dropdown not typically shown in this older mobile approach,
-           but you could replicate if you wish. For simplicity, do a single link: -->
-                    <li>
-                        <a href="#">Press</a>
-                        <ul>
-                            <li><a href="/press/articles">Articles</a></li>
-                            <li><a href="/press/videos">Videos</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Renamed membership to join -->
-                    <li>
-                        <a href="https://www.unitedconservative.ca/take-action/membership/" class="join"
-                            target="_blank">
-                            Join
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/"
-                            class="donate" target="_blank">
-                            Donate
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="news-hero">
-        <div class="hero-content"> <!-- Instead of having picture in news.css it should be attached in the html code -->
-            <h1>Press</h1>
-            <p class="tagline">{article_name}</p>
-        </div>
-    </section>
-
-    <!-- 2-COLUMN LAYOUT -->
-    <section class="news-container">
-        <!-- LEFT COLUMN: Article content (green area in your screenshot) -->
-        <div class="articles-list">
-            <article class="news-article" style="flex-direction: column;">
-                <!-- Title & Date -->
-                <h2>Chicken Tenders Dipped in Hot Sauce Outshine BBQ Sauce</h2>
-                <p style="font-style: italic; color: #555;">
-                    March 5, 2025 – Edmonton, AB
-                </p>
-
-                <!-- Article body -->
-                <p>
-                    A heated debate among chicken lovers may finally be settled:
-                    chicken tenders taste undeniably better when dipped in hot sauce
-                    rather than barbecue sauce.
-                </p>
-
-                <p>
-                    A recent survey conducted by the Canadian Culinary Research Institute
-                    found that 62% of respondents preferred the fiery kick of hot sauce
-                    over the combination of smoky, molasses-laden BBQ sauce.
-                    “Hot sauce enhances the natural umami of the chicken,” says
-                    Dr. Lisa Froman, a food scientist and flavor expert.
-                </p>
-
-                <p>
-                    Barbecue sauce, while sweet and tangy, can sometimes overpower
-                    the chicken flavor. According to some, the thickness of barbecue
-                    sauce can also mask the crispy texture of well-fried tenders.
-                    In contrast, a well-balanced hot sauce creates a more dynamic
-                    and flavorful experience.
-                </p>
-
-                <p>
-                    “It’s not about mere spiciness—it's about adding a layer of heat
-                    that complements the chicken, making every bite juicier
-                    and more satisfying,” Dr. Froman added.
-                </p>
-
-                <p>
-                    In taste tests, barbecue sauce finished last by a wide margin.
-                    “I'm shocked,” said local barbecue enthusiast Phil Watson.
-                    “I’ve always loved my BBQ sauce, but this hot sauce comparison
-                    is making me rethink my choices.”
-                </p>
-
-                <p>
-                    Whether you’re a die-hard hot sauce fan or prefer the sweetness
-                    of barbecue, one thing is certain: Canadians are passionate
-                    about their chicken tenders—and the sauces that go with them.
-                    Which side are you on?
-                </p>
-            </article>
-        </div>
-
-        <!-- RIGHT COLUMN: Sidebar -->
-        <aside class="news-sidebar">
-            <!-- Matches your mock-up: top buttons, then newsletter, images, press archive -->
-            <button onclick="scrollToContact()">Contact Us</button>
-            <button>Press Articles</button>
-            <button>Party Logo / link to news</button>
-
-            <h3>Get the Newsletter</h3>
-            <form>
-                <input type="text" placeholder="First Name" />
-                <input type="text" placeholder="Last Name" />
-                <input type="text" placeholder="Membership #" />
-                <input type="email" placeholder="Email Address" />
-                <button type="submit">Submit</button>
-            </form>
-
-            <!-- Four placeholders where "I" was in your design -->
-            <a href="/press/articles/trending-article-1">
-                <img src="./images/CGY-Leaders-Dinner-Event.jpg" alt="Sidebar Image 1" class="sidebar-image" />
+          <!-- Join -->
+          <li>
+            <a href="https://www.unitedconservative.ca/take-action/membership/" 
+               class="join" target="_blank">
+              Join
             </a>
-            <a href="/press/articles/trending-article-2">
-                <img src="./images/CGY-Leaders-Dinner-Event.jpg" alt="Sidebar Image 2" class="sidebar-image" />
+          </li>
+
+          <!-- Donate -->
+          <li>
+            <a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/" 
+               class="donate" target="_blank">
+              Donate
             </a>
-            <button>Press Archive</button>
-            <label for="select-month">Select Month</label>
-            <select id="select-month">
-                <option>January</option>
-                <option>February</option>
-                <option>March</option>
-            </select>
-        </aside>
-    </section>
+          </li>
+        </ul>
+      </nav>
 
-    <section class="contact-info">
-        <div>
-            <i class="fas fa-building"></i> <!-- Address Icon -->
-            <h3>Address</h3>
-            <p>PO Box 513. Lethbridge, AB, T1J 3Z4</p>
-        </div>
-        <div>
-            <i class="fas fa-envelope"></i> <!-- Email Icon -->
-            <h3>Email</h3>
-            <p><a href="mailto:Lethbridge-West@unitedconservative.ca ">Lethbridge-West@unitedconservative.ca </a></p>
-        </div>
-    </section>
+      <!-- Mobile Navigation -->
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/board-of-directors">Board of Directors</a></li>
+          <li><a href="/governance">Governance</a></li>
+          <li><a href="/news">News</a></li>
+          <li><a href="/events">Events</a></li>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-links">
-                <ul class="bold-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/board-of-directors">About</a></li>
-                    <li><a href="/events">Events</a></li>
-                    <li><a href="/press/articles">Press</a></li>
-                </ul>
-                <ul class="regular-links">
-                    <li><a
-                            href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/">Donate</a>
-                    </li>
-                    <li><a href="https://www.unitedconservative.ca/petitions/volunteer/">Volunteer</a></li>
-                    <li><a href="https://www.unitedconservative.ca/take-action/membership/">Join</a></li>
-                    <li><a href="https://www.unitedconservative.ca/petitions/subscribe/">Subscribe</a></li>
-                </ul>
-            </div>
+          <li>
+            <a href="#">Press</a>
+            <ul>
+              <li><a href="/press/articles">Articles</a></li>
+              <li><a href="/press/videos">Videos</a></li>
+            </ul>
+          </li>
 
-            <div class="footer-logo">
-                <img src="images/Copy_of_Add_a_subheading__4_-removebg-preview.png" alt="Footer Logo" />
-            </div>
+          <li>
+            <a href="https://www.unitedconservative.ca/take-action/membership/" 
+               class="join" target="_blank">
+              Join
+            </a>
+          </li>
+          <li>
+            <a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/" 
+               class="donate" target="_blank">
+              Donate
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-            <div class="footer-social">
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/p/United-Conservative-Party-Lethbridge-West-100068133120762/"
-                    target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
+  <!-- HERO SECTION: Override background from CSS -->
+  <section class="news-hero" style="background: url(./images/CGY-Leaders-Dinner-Event.jpg)">
+    <div class="hero-content">
+      <h1>PRESS</h1>
+      <p class="tagline">{article_name}</p>
+    </div>
+  </section>
 
-                <!-- X (Twitter) -->
-                <a href="https://twitter.com/Alberta_UCP" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="x-logo" x="0px" y="0px" viewBox="0 0 1200 1227">
-                        <path
-                            d="M714.2,519.3L1160.9,0H1055L667.1,450.9L357.3,0H0l468.5,681.8L0,1226.4h105.9l409.6-476.2l327.2,476.2H1200 L714.2,519.3L714.2,519.3z M569.2,687.8l-47.5-67.9L144,79.7h162.6l304.8,436l47.5,67.9l396.2,566.7H892.5L569.2,687.8L569.2,687.8z" />
-                    </svg>
-                </a>
+  <!-- 2-COLUMN LAYOUT -->
+  <section class="news-container">
+    <!-- LEFT COLUMN: Paraphrased Article Content -->
+    <div class="articles-list">
+      <article class="news-article" style="flex-direction: column;">
+        <!-- Title & Date -->
+        <h2>John Middleton-Hope Secures UCP Nomination for Lethbridge-West By-Election</h2>
+        <p style="font-style: italic; color: #555;">
+          September 24, 2024 – Lethbridge, AB
+        </p>
 
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/ucplethwest/" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
+        <!-- Paraphrased Body Text -->
+        <p>
+          In a decisive nomination vote, John Middleton-Hope has been chosen by the United Conservative Party (UCP) to be
+          its official candidate for the upcoming by-election in Lethbridge-West. The seat opened up following the recent
+          departure of the previous MLA, paving the way for a competitive race to represent the area in the Alberta Legislature.
+        </p>
 
-                <!-- Rumble -->
-                <a href="https://rumble.com/c/AlbertaUCP" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1441 1583" width="24" height="24">
-                        <path fill="white"
-                            d="M1339.3,537.2c32.1,35.2,57.5,75.9,74.8,120.3,17.2,44.4,26.1,91.5,26.2,139.2,0,47.6-8.6,94.8-25.7,139.2s-42.3,85.3-74.3,120.6c-57.2,63.1-119,121.9-184.9,175.9s-135.7,103-208.9,146.7c-73.1,43.6-149.4,81.8-228.2,114.2-78.8,32.4-159.9,59-242.6,79.4-42.2,10.6-86.1,12.9-129.1,6.8-43.1-6.1-84.6-20.4-122.2-42.3-37.7-21.8-70.7-50.7-97.4-85-26.6-34.4-46.4-73.6-58.2-115.4C-31.6,993.8-16.8,606,80,261.5,131,80.6,301.3-33,476.7,8.8c324.8,77.4,629.6,276.7,862.6,528.4h0ZM882,893.4c61.2-48.4,61.2-142.7,0-192.6-21.7-18.1-44-35.4-66.8-52.1-22.8-16.7-46.1-32.7-69.9-48-23.7-15.3-47.9-29.8-72.6-43.7-24.7-13.8-49.7-26.9-75.2-39.2-70.3-33.6-148.8,13.3-160.1,93.3-17.3,122.3-20.4,245.6-9.1,362.8,7.6,81.1,85.1,129.5,156.5,98.4,26.6-11.5,52.8-23.8,78.6-37,25.8-13.2,51.1-27.3,76-42.2s49.2-30.7,73-47.2,47-33.9,69.6-52v-.5Z">
-                        </path>
-                    </svg>
-                </a>
+        <p>
+          Middleton-Hope, a longtime Lethbridge resident with a background in law enforcement, served as a city police chief
+          and has also worked with the RCMP. He emphasizes community safety, economic development, and social well-being as
+          central parts of his campaign platform, aiming to address a variety of local priorities.
+        </p>
 
-                <!-- YouTube -->
-                <a href="https://www.youtube.com/@unitedconservatives" target="_blank">
-                    <i class="fab fa-youtube"></i>
-                </a>
-            </div>
-        </div>
-        <div class="footer-info">
-            <style>
-                .footer-info p {
-                    margin-top: 20px;
-                    text-align: center;
-                    font-size: 0.8rem;
-                    font-weight: 300;
-                    color: #d9d9d9;
-                }
-            </style>
-            <p>© 2025 UCP Lethbridge-West. All Rights Reserved.</p>
-        </div>
-    </footer>
+        <p>
+          “I’m incredibly honored by the confidence the party has placed in me,” Middleton-Hope remarked. “It’s a privilege
+          to stand for the values of this riding, and I look forward to engaging with residents throughout the campaign.”
+        </p>
 
-    <script src="script.js"></script>
-    <script src="news.js"></script>
+        <p>
+          While the exact date of the by-election has not yet been announced, observers anticipate a closely watched race,
+          given Lethbridge-West’s history of spirited contests. Other political parties are expected to name their candidates
+          soon, setting the stage for a dynamic campaign in the weeks ahead.
+        </p>
+      </article>
+    </div>
+
+    <!-- RIGHT COLUMN: Sidebar -->
+    <aside class="news-sidebar">
+      <button onclick="scrollToContact()">Contact Us</button>
+      <button>Press Articles</button>
+      <button>Party Logo / link to news</button>
+
+      <h3>Get the Newsletter</h3>
+      <form>
+        <input type="text" placeholder="First Name" />
+        <input type="text" placeholder="Last Name" />
+        <input type="text" placeholder="Membership #" />
+        <input type="email" placeholder="Email Address" />
+        <button type="submit">Submit</button>
+      </form>
+
+      <a href="/press/articles/trending-article-1">
+        <img src="./images/CGY-Leaders-Dinner-Event.jpg" 
+             alt="Sidebar Image 1" class="sidebar-image" />
+      </a>
+      <a href="/press/articles/trending-article-2">
+        <img src="./images/CGY-Leaders-Dinner-Event.jpg" 
+             alt="Sidebar Image 2" class="sidebar-image" />
+      </a>
+      <button>Press Archive</button>
+      <label for="select-month">Select Month</label>
+      <select id="select-month">
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+      </select>
+    </aside>
+  </section>
+
+  <!-- CONTACT INFO -->
+  <section class="contact-info">
+    <div>
+      <i class="fas fa-building"></i>
+      <h3>Address</h3>
+      <p>PO Box 513. Lethbridge, AB, T1J 3Z4</p>
+    </div>
+    <div>
+      <i class="fas fa-envelope"></i>
+      <h3>Email</h3>
+      <p>
+        <a href="mailto:Lethbridge-West@unitedconservative.ca">
+          Lethbridge-West@unitedconservative.ca
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <ul class="bold-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/board-of-directors">About</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/press/articles">Press</a></li>
+        </ul>
+        <ul class="regular-links">
+          <li>
+            <a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/">
+              Donate
+            </a>
+          </li>
+          <li>
+            <a href="https://www.unitedconservative.ca/petitions/volunteer/">
+              Volunteer
+            </a>
+          </li>
+          <li>
+            <a href="https://www.unitedconservative.ca/take-action/membership/">
+              Join
+            </a>
+          </li>
+          <li>
+            <a href="https://www.unitedconservative.ca/petitions/subscribe/">
+              Subscribe
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-logo">
+        <img src="images/Copy_of_Add_a_subheading__4_-removebg-preview.png" alt="Footer Logo" />
+      </div>
+
+      <div class="footer-social">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/p/United-Conservative-Party-Lethbridge-West-100068133120762/" 
+           target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- X (Twitter) -->
+        <a href="https://twitter.com/Alberta_UCP" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" class="x-logo" x="0px" y="0px" viewBox="0 0 1200 1227">
+            <path
+              d="M714.2,519.3L1160.9,0H1055L667.1,450.9L357.3,0H0l468.5,681.8L0,1226.4h105.9l409.6-476.2l327.2,476.2H1200 
+                 L714.2,519.3z M569.2,687.8l-47.5-67.9L144,79.7h162.6l304.8,436l47.5,67.9l396.2,566.7H892.5L569.2,687.8z" />
+          </svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/ucplethwest/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <!-- Rumble -->
+        <a href="https://rumble.com/c/AlbertaUCP" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1441 1583" width="24" height="24">
+            <path fill="white"
+              d="M1339.3,537.2c32.1,35.2,57.5,75.9,74.8,120.3,17.2,44.4,26.1,91.5,26.2,139.2,0,47.6-8.6,94.8-25.7,139.2
+               s-42.3,85.3-74.3,120.6c-57.2,63.1-119,121.9-184.9,175.9s-135.7,103-208.9,146.7c-73.1,43.6-149.4,81.8-228.2,114.2
+               s-149.4,81.8-242.6,79.4c-42.2-0.5-86.1-2.8-129.1-6.8c-43.1-6.1-84.6-20.4-122.2-42.3c-37.7-21.8-70.7-50.7-97.4-85
+               c-26.6-34.4-46.4-73.6-58.2-115.4C-31.6,993.8-16.8,606,80,261.5,131,80.6,301.3-33,476.7,8.8c324.8,77.4,629.6,276.7,862.6,528.4
+               h0ZM882,893.4c61.2-48.4,61.2-142.7,0-192.6-21.7-18.1-44-35.4-66.8-52.1-22.8-16.7-46.1-32.7-69.9-48
+               c-23.7-15.3-47.9-29.8-72.6-43.7c-24.7-13.8-49.7-26.9-75.2-39.2c-70.3-33.6-148.8,13.3-160.1,93.3
+               c-17.3,122.3-20.4,245.6-9.1,362.8c7.6,81.1,85.1,129.5,156.5,98.4c26.6-11.5,52.8-23.8,78.6-37c25.8-13.2,51.1-27.3,76-42.2
+               s49.2-30.7,73-47.2s47-33.9,69.6-52v-0.5Z">
+            </path>
+          </svg>
+        </a>
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@unitedconservatives" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer-info">
+      <style>
+        .footer-info p {
+          margin-top: 20px;
+          text-align: center;
+          font-size: 0.8rem;
+          font-weight: 300;
+          color: #d9d9d9;
+        }
+      </style>
+      <p>© 2025 UCP Lethbridge-West. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="news.js"></script>
 </body>
-
 </html>
