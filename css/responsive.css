@@ -1,5 +1,6 @@
 @media (min-width: 1025px) {
-    .mobile-nav {
+    .mobile-nav,
+    .mobile-submenu {
         display: none !important;
     }
 }
@@ -12,7 +13,7 @@
     .menu-button {
         display: block;
         width: 100%;
-        background-color: #0320A5;
+        background-color: #0071e2;
         color: white;
         padding: 10px;
         font-size: 1.2rem;
@@ -31,7 +32,7 @@
         opacity: 0;
         pointer-events: none;
         transition: transform 0.3s ease, opacity 0.3s ease;
-        background-color: #0320A5;
+        background-color: #0056b3;
         z-index: 1000;
         text-align: center;
         padding: 10px 0;
@@ -56,8 +57,74 @@
         text-decoration: none;
     }
 
+    /* General styling for mobile navigation & submenus */
+    .mobile-nav,
+    .mobile-submenu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        width: 90%;
+        transform: translateX(-50%) translateY(-20px);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        background-color: #0056b3;
+        z-index: 1000;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 10px; /* Optional: Matches a rounded look */
+    }
+
+    /* Show when activated */
+    .mobile-nav.show,
+    .mobile-submenu.show {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    /* Style the back button */
+    .back-button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+        padding: 10px;
+        cursor: pointer;
+        text-align: left;
+        width: 100%;
+        display: block;
+    }
+
+    .back-button:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Style for submenu list */
+    .mobile-submenu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-submenu ul li {
+        padding: 12px;
+    }
+
+    .mobile-submenu ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    .mobile-submenu ul li a:hover {
+        text-decoration: underline;
+    }
+
     .mobile-nav ul li a.join {
-        background-color: #007bff;
+        background-color: #3c9eff;
         color: #fff;
         border-radius: 8px;
         font-size: 1.15rem;
@@ -163,7 +230,7 @@
         align-items: center;
         gap: 20px;
     }
-    
+
     .contact-card {
         width: 90%;
         margin: 0 auto;

@@ -8,6 +8,7 @@
     <link rel="icon" href="images/favicon.ico" type="image/ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./css/governance.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <meta name="description" content="Learn about the governance structure of UCP West-Lethbridge.">
@@ -44,7 +45,7 @@
         <div class="container">
             <!-- Logo -->
             <div class="logo">
-                <a href="/">
+                <a href="./index.html">
                     <img src="images/ucp-logo-reverse-rgb.png" alt="UCP W-L Home Media">
                 </a>
             </div>
@@ -55,13 +56,12 @@
             <!-- Desktop Navigation -->
             <nav class="desktop-nav">
                 <ul>
-                    <li><a href="/">Home</a></li>
+                    <li><a href="./index.html">Home</a></li>
                     <li>
                         <a href="#">About</a>
                         <ul>
-                            <li><a href="/board-of-directors">Board of Directors</a></li>
-                            <li><a href="/governance">Governance</a></li>
-                            <li><a href="/news">News</a></li>
+                            <li><a href="./board-of-directors.html">Board of Directors</a></li>
+                            <li><a href="./governance.html">Governance</a></li>
                         </ul>
                     </li>
                     <li>
@@ -70,7 +70,7 @@
                             <li><a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/"
                                     target="_blank">Donate</a></li>
                             <li><a href="https://www.unitedconservative.ca/take-action/membership/"
-                                    target="_blank">Membership</a></li>
+                                    target="_blank">Join</a></li>
                             <li><a href="https://www.unitedconservative.ca/strongandfreeclub/" target="_blank">Strong
                                     and Free Club</a></li>
                             <li><a href="https://www.unitedconservative.ca/membership-check/" target="_blank">Membership
@@ -81,28 +81,80 @@
                                     target="_blank">Subscribe</a></li>
                         </ul>
                     </li>
-                    <li><a href="/events">Events</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="https://www.unitedconservative.ca/take-action/membership/"
-                            class="membership">Membership</a></li>
-                    <li><a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/"
-                            class="donate">Donate</a></li>
+                    <li><a href="./events.html">Events</a></li>
+
+                    <li>
+                        <a href="#">Press</a>
+                        <ul>
+                            <li><a href="./news.html">Articles</a></li>
+                            <li><a href="./[news_videos].html">Videos</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="https://www.unitedconservative.ca/take-action/membership/" class="join"
+                            target="_blank">
+                            Join
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/"
+                            class="donate" target="_blank">
+                            Donate
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
             <!-- Mobile Navigation -->
             <nav class="mobile-nav">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/board-of-directors">Board of Directors</a></li>
-                    <li><a href="/governance">Governance</a></li>
-                    <li><a href="/news">News</a></li>
-                    <li><a href="/events">Events</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="https://www.unitedconservative.ca/take-action/membership/"
-                            class="membership">Membership</a></li>
+                <ul id="main-menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#" onclick="openSubMenu('about-menu')">About →</a></li>
+                    <li><a href="#" onclick="openSubMenu('action-centre-menu')">Action Centre →</a></li>
+                    <li><a href="#" onclick="openSubMenu('press-menu')">Press →</a></li>
+                    <li><a href="./events.html">Events</a></li>
+                    <li><a href="https://www.unitedconservative.ca/take-action/membership/" class="join"
+                            target="_blank">Join</a></li>
                     <li><a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/"
-                            class="donate">Donate</a></li>
+                            class="donate" target="_blank">Donate</a></li>
+                </ul>
+            </nav>
+
+            <!-- About Submenu -->
+            <nav class="mobile-submenu" id="about-menu">
+                <button class="back-button" onclick="closeSubMenu('about-menu')">← Back</button>
+                <ul>
+                    <li><a href="./board-of-directors.html">Board of Directors</a></li>
+                    <li><a href="./governance.html">Governance</a></li>
+                </ul>
+            </nav>
+
+            <!-- Action Centre Submenu -->
+            <nav class="mobile-submenu" id="action-centre-menu">
+                <button class="back-button" onclick="closeSubMenu('action-centre-menu')">← Back</button>
+                <ul>
+                    <li><a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/"
+                            target="_blank">Donate</a></li>
+                    <li><a href="https://www.unitedconservative.ca/take-action/membership/" target="_blank">Join</a>
+                    </li>
+                    <li><a href="https://www.unitedconservative.ca/strongandfreeclub/" target="_blank">Strong and Free
+                            Club</a></li>
+                    <li><a href="https://www.unitedconservative.ca/membership-check/" target="_blank">Membership
+                            Check</a></li>
+                    <li><a href="https://www.unitedconservative.ca/petitions/volunteer/" target="_blank">Volunteer</a>
+                    </li>
+                    <li><a href="https://www.unitedconservative.ca/petitions/subscribe/" target="_blank">Subscribe</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Press Submenu -->
+            <nav class="mobile-submenu" id="press-menu">
+                <button class="back-button" onclick="closeSubMenu('press-menu')">← Back</button>
+                <ul>
+                    <li><a href="./news.html">Articles</a></li>
+                    <li><a href="./news_videos.html">Videos</a></li>
                 </ul>
             </nav>
         </div>
@@ -143,20 +195,21 @@
         <div class="footer-container">
             <div class="footer-links">
                 <ul class="bold-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/board-of-directors">About</a></li>
-                    <li><a href="/events">Events</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="board-of-directors.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="news.html">Press</a></li>
                 </ul>
                 <ul class="regular-links">
                     <li><a
                             href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/">Donate</a>
                     </li>
                     <li><a href="https://www.unitedconservative.ca/petitions/volunteer/">Volunteer</a></li>
-                    <li><a href="https://www.unitedconservative.ca/take-action/membership/">Membership</a></li>
+                    <li><a href="https://www.unitedconservative.ca/take-action/membership/">Join</a></li>
                     <li><a href="https://www.unitedconservative.ca/petitions/subscribe/">Subscribe</a></li>
                 </ul>
             </div>
+
             <div class="footer-social">
                 <!-- Facebook -->
                 <a href="https://www.facebook.com/p/United-Conservative-Party-Lethbridge-West-100068133120762/"
@@ -203,12 +256,6 @@
                 }
             </style>
             <p>© 2025 UCP Lethbridge-West. All Rights Reserved.</p>
-            <p>
-                Created by
-                <a href="https://github.com/WildRoseDevs" target="_blank" style="text-decoration:none; color: white;">
-                    <strong>Wild Rose Development</strong>
-                </a>
-            </p>
         </div>
     </footer>
     <script src="script.js"></script>

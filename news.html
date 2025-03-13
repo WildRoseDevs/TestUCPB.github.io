@@ -18,7 +18,7 @@
     <div class="container">
       <!-- Logo -->
       <div class="logo">
-        <a href="index.html">
+        <a href="./index.html">
           <img src="images/ucp-logo-reverse-rgb.png" alt="UCP W-L Home Media">
         </a>
       </div>
@@ -29,12 +29,12 @@
       <!-- Desktop Navigation -->
       <nav class="desktop-nav">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="./index.html">Home</a></li>
           <li>
             <a href="#">About</a>
             <ul>
-              <li><a href="board-of-directors.html">Board of Directors</a></li>
-              <li><a href="governance.html">Governance</a></li>
+              <li><a href="./board-of-directors.html">Board of Directors</a></li>
+              <li><a href="./governance.html">Governance</a></li>
             </ul>
           </li>
           <li>
@@ -42,27 +42,25 @@
             <ul>
               <li><a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/"
                   target="_blank">Donate</a></li>
-              <li><a href="https://www.unitedconservative.ca/take-action/membership/" target="_blank">join</a></li>
+              <li><a href="https://www.unitedconservative.ca/take-action/membership/" target="_blank">Join</a></li>
               <li><a href="https://www.unitedconservative.ca/strongandfreeclub/" target="_blank">Strong
                   and Free Club</a></li>
-              <li><a href="https://www.unitedconservative.ca/membership-check/" target="_blank">Join
+              <li><a href="https://www.unitedconservative.ca/membership-check/" target="_blank">Membership
                   Check</a></li>
               <li><a href="https://www.unitedconservative.ca/petitions/volunteer/" target="_blank">Volunteer</a></li>
               <li><a href="https://www.unitedconservative.ca/petitions/subscribe/" target="_blank">Subscribe</a></li>
             </ul>
           </li>
-          <li><a href="events.html">Events</a></li>
+          <li><a href="./events.html">Events</a></li>
 
-          <!-- RENAMED: Contact → Press (dropdown) -->
           <li>
             <a href="#">Press</a>
             <ul>
-              <li><a href="news.html">Articles</a></li>
-              <li><a href="[news_videos].html">Videos</a></li>
+              <li><a href="./news.html">Articles</a></li>
+              <li><a href="./[news_videos].html">Videos</a></li>
             </ul>
           </li>
 
-          <!-- RENAMED: Membership → Join -->
           <li>
             <a href="https://www.unitedconservative.ca/take-action/membership/" class="join" target="_blank">
               Join
@@ -79,35 +77,53 @@
 
       <!-- Mobile Navigation -->
       <nav class="mobile-nav">
+        <ul id="main-menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#" onclick="openSubMenu('about-menu')">About →</a></li>
+          <li><a href="#" onclick="openSubMenu('action-centre-menu')">Action Centre →</a></li>
+          <li><a href="#" onclick="openSubMenu('press-menu')">Press →</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li><a href="https://www.unitedconservative.ca/take-action/membership/" class="join" target="_blank">Join</a>
+          </li>
+          <li><a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/"
+              class="donate" target="_blank">Donate</a></li>
+        </ul>
+      </nav>
+
+      <!-- About Submenu -->
+      <nav class="mobile-submenu" id="about-menu">
+        <button class="back-button" onclick="closeSubMenu('about-menu')">← Back</button>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="board-of-directors.html">Board of Directors</a></li>
-          <li><a href="governance.html">Governance</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="events.html">Events</a></li>
+          <li><a href="./board-of-directors.html">Board of Directors</a></li>
+          <li><a href="./governance.html">Governance</a></li>
+        </ul>
+      </nav>
 
-          <!-- Contact → Press dropdown not typically shown in this older mobile approach,
-           but you could replicate if you wish. For simplicity, do a single link: -->
-          <li>
-            <a href="#">Press</a>
-            <ul>
-              <li><a href="news.html">Articles</a></li>
-              <li><a href="[news_videos].html">Videos</a></li>
-            </ul>
+      <!-- Action Centre Submenu -->
+      <nav class="mobile-submenu" id="action-centre-menu">
+        <button class="back-button" onclick="closeSubMenu('action-centre-menu')">← Back</button>
+        <ul>
+          <li><a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/"
+              target="_blank">Donate</a></li>
+          <li><a href="https://www.unitedconservative.ca/take-action/membership/" target="_blank">Join</a>
           </li>
+          <li><a href="https://www.unitedconservative.ca/strongandfreeclub/" target="_blank">Strong and Free
+              Club</a></li>
+          <li><a href="https://www.unitedconservative.ca/membership-check/" target="_blank">Membership
+              Check</a></li>
+          <li><a href="https://www.unitedconservative.ca/petitions/volunteer/" target="_blank">Volunteer</a>
+          </li>
+          <li><a href="https://www.unitedconservative.ca/petitions/subscribe/" target="_blank">Subscribe</a>
+          </li>
+        </ul>
+      </nav>
 
-          <!-- Renamed membership to join -->
-          <li>
-            <a href="https://www.unitedconservative.ca/take-action/membership/" class="join" target="_blank">
-              Join
-            </a>
-          </li>
-          <li>
-            <a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/" class="donate"
-              target="_blank">
-              Donate
-            </a>
-          </li>
+      <!-- Press Submenu -->
+      <nav class="mobile-submenu" id="press-menu">
+        <button class="back-button" onclick="closeSubMenu('press-menu')">← Back</button>
+        <ul>
+          <li><a href="./news.html">Articles</a></li>
+          <li><a href="./news_videos.html">Videos</a></li>
         </ul>
       </nav>
     </div>

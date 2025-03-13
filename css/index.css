@@ -45,7 +45,7 @@ header .logo img {
 }
 
 .desktop-nav {
-    display: flex;
+    display: flex !important;
     align-items: center; /* ensures the nav itself is vertically centered */
     gap: 15px;
     justify-content: flex-end;
@@ -75,7 +75,7 @@ header .logo img {
     text-decoration: none;
     color: #fff; /* white text */
     transition: background-color 0.3s ease;
-    min-height: 40px; /* ensures a consistent height */
+    min-height: 20px; /* ensures a consistent height */
 }
 
 /* Dropdowns if you have them */
@@ -87,7 +87,7 @@ header .logo img {
     background-color: #0056b3;
     padding: 10px 0;
     border-radius: 5px;
-    min-width: 180px;
+    min-width: 60px;
 }
 .desktop-nav ul li:hover > ul {
     display: block;
@@ -139,12 +139,12 @@ header .logo img {
     background-color: #b8001c;
 }
 
-/* If you want the rest of the nav items also aligned: */
+/* Ensure navbar items are uniform without affecting submenus */
 .desktop-nav ul li a:not(.join):not(.donate) {
-    /* same height, but no forced width */
-    min-height: 40px;
-    padding: 8px 16px;
-    line-height: 1;
+    height: auto;
+    display: flex;
+    align-items: center;
+    line-height: normal;
 }
 
 .hero {
