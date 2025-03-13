@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stay Connected: News - UCP West-Lethbridge</title>
+  <title>Press: Article Name - UCP West-Lethbridge</title>
   <link rel="icon" href="images/favicon.ico" type="image/ico" />
   <link rel="stylesheet" href="./css/index.css" />
   <link rel="stylesheet" href="./css/news.css" />
   <link rel="stylesheet" href="./css/responsive.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
 <body>
@@ -113,86 +113,58 @@
     </div>
   </header>
 
-  <section class="news-hero">
+  <!-- HERO SECTION: Override background from CSS -->
+  <section class="news-hero" style="background: url(./images/CGY-Leaders-Dinner-Event.jpg)">
     <div class="hero-content">
-      <h1>Stay Connected</h1>
-      <p class="tagline">"The News That Matters, When It Matters"</p>
+      <h1>PRESS</h1>
+      <p class="tagline">{article_name}</p>
     </div>
   </section>
 
   <!-- 2-COLUMN LAYOUT -->
   <section class="news-container">
-    <!-- LEFT COLUMN: 4 horizontal article boxes + Load More -->
+    <!-- LEFT COLUMN: Paraphrased Article Content -->
     <div class="articles-list">
+      <article class="news-article" style="flex-direction: column;">
+        <!-- Title & Date -->
+        <h2>John Middleton-Hope Secures UCP Nomination for Lethbridge-West By-Election</h2>
+        <p style="font-style: italic; color: #555;">
+          September 24, 2024 – Lethbridge, AB
+        </p>
 
-      <!-- Article 1: Health -->
-      <article class="news-article">
-        <div class="article-image">
-          <img src="./images/Suport Alberta.jpg" alt="Health" />
-        </div>
-        <div class="article-content">
-          <h3 class="category health">HEALTH</h3>
-          <h2 class="article-title">Health Initiative Update</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Berlin, March 4, 2025. The prospective coalition of CDU and CSU...
-            <a href="#" class="read-more">[...]</a>
-          </p>
-        </div>
+        <!-- Paraphrased Body Text -->
+        <p>
+          In a decisive nomination vote, John Middleton-Hope has been chosen by the United Conservative Party (UCP) to
+          be
+          its official candidate for the upcoming by-election in Lethbridge-West. The seat opened up following the
+          recent
+          departure of the previous MLA, paving the way for a competitive race to represent the area in the Alberta
+          Legislature.
+        </p>
+
+        <p>
+          Middleton-Hope, a longtime Lethbridge resident with a background in law enforcement, served as a city police
+          chief
+          and has also worked with the RCMP. He emphasizes community safety, economic development, and social well-being
+          as
+          central parts of his campaign platform, aiming to address a variety of local priorities.
+        </p>
+
+        <p>
+          “I’m incredibly honored by the confidence the party has placed in me,” Middleton-Hope remarked. “It’s a
+          privilege
+          to stand for the values of this riding, and I look forward to engaging with residents throughout the
+          campaign.”
+        </p>
+
+        <p>
+          While the exact date of the by-election has not yet been announced, observers anticipate a closely watched
+          race,
+          given Lethbridge-West’s history of spirited contests. Other political parties are expected to name their
+          candidates
+          soon, setting the stage for a dynamic campaign in the weeks ahead.
+        </p>
       </article>
-
-      <!-- Article 2: Economy -->
-      <article class="news-article">
-        <div class="article-image">
-          <img src="./images/Suport Alberta.jpg" alt="Economy" />
-        </div>
-        <div class="article-content">
-          <h3 class="category economy">ECONOMY</h3>
-          <h2 class="article-title">Economic Growth Prospects</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Berlin, March 4, 2025. The prospective coalition of CDU and CSU...
-            <a href="#" class="read-more">[...]</a>
-          </p>
-        </div>
-      </article>
-
-      <!-- Article 3: General -->
-      <article class="news-article">
-        <div class="article-image">
-          <img src="./images/Suport Alberta.jpg" alt="General" />
-        </div>
-        <div class="article-content">
-          <h3 class="category general">GENERAL</h3>
-          <h2 class="article-title">Legislative Reform Bill</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Berlin, March 4, 2025. The prospective coalition of CDU and CSU...
-            <a href="{article_name1}.html" class="read-more">[...]</a>
-          </p>
-        </div>
-      </article>
-
-      <!-- Article 4: Social -->
-      <article class="news-article">
-        <div class="article-image">
-          <img src="./images/Suport Alberta.jpg" alt="Social" />
-        </div>
-        <div class="article-content">
-          <h3 class="category social">SOCIAL</h3>
-          <h2 class="article-title">Community Outreach Program</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Berlin, March 4, 2025. The prospective coalition of CDU and CSU...
-            <a href="{article_name2}.html" class="read-more">[...]</a>
-          </p>
-        </div>
-      </article>
-
-      <!-- LOAD MORE -->
-      <div class="load-more">
-        <button>Load More</button>
-      </div>
     </div>
 
     <!-- RIGHT COLUMN: Sidebar -->
@@ -210,11 +182,10 @@
         <button type="submit">Submit</button>
       </form>
 
-      <!-- Four placeholders where "I" was in your design -->
-      <a href="{article_name1}.html">
+      <a href="/press/articles/trending-article-1">
         <img src="./images/CGY-Leaders-Dinner-Event.jpg" alt="Sidebar Image 1" class="sidebar-image" />
       </a>
-      <a href="{article_name2}.html">
+      <a href="/press/articles/trending-article-2">
         <img src="./images/CGY-Leaders-Dinner-Event.jpg" alt="Sidebar Image 2" class="sidebar-image" />
       </a>
       <button>Press Archive</button>
@@ -227,16 +198,21 @@
     </aside>
   </section>
 
+  <!-- CONTACT INFO -->
   <section class="contact-info">
     <div>
-      <i class="fas fa-building"></i> <!-- Address Icon -->
+      <i class="fas fa-building"></i>
       <h3>Address</h3>
       <p>PO Box 513. Lethbridge, AB, T1J 3Z4</p>
     </div>
     <div>
-      <i class="fas fa-envelope"></i> <!-- Email Icon -->
+      <i class="fas fa-envelope"></i>
       <h3>Email</h3>
-      <p><a href="mailto:Lethbridge-West@unitedconservative.ca ">Lethbridge-West@unitedconservative.ca </a></p>
+      <p>
+        <a href="mailto:Lethbridge-West@unitedconservative.ca">
+          Lethbridge-West@unitedconservative.ca
+        </a>
+      </p>
     </div>
   </section>
 

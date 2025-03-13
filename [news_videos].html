@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>UCP Video Vault: Stay Informed</title>
-
-  <!-- Favicon / Fonts / CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Vault: Stay Informed - UCP Lethbridge-West</title>
   <link rel="icon" href="images/favicon.ico" type="image/ico" />
   <link rel="stylesheet" href="./css/index.css" />
   <link rel="stylesheet" href="./css/news.css" />
   <link rel="stylesheet" href="./css/responsive.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-  <!-- HEADER / NAVBAR (unchanged) -->
   <header>
     <div class="container">
       <!-- Logo -->
       <div class="logo">
-        <a href="/">
+        <a href="index.html">
           <img src="images/ucp-logo-reverse-rgb.png" alt="UCP W-L Home Media">
         </a>
       </div>
@@ -31,42 +29,48 @@
       <!-- Desktop Navigation -->
       <nav class="desktop-nav">
         <ul>
-          <li><a href="/">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li>
             <a href="#">About</a>
             <ul>
-              <li><a href="/board-of-directors">Board of Directors</a></li>
-              <li><a href="/governance">Governance</a></li>
+              <li><a href="board-of-directors.html">Board of Directors</a></li>
+              <li><a href="governance.html">Governance</a></li>
             </ul>
           </li>
           <li>
             <a href="#">Action Centre</a>
             <ul>
-              <li><a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/" target="_blank">Donate</a></li>
-              <li><a href="https://www.unitedconservative.ca/take-action/membership/" target="_blank">Join</a></li>
-              <li><a href="https://www.unitedconservative.ca/strongandfreeclub/" target="_blank">Strong and Free Club</a></li>
-              <li><a href="https://www.unitedconservative.ca/membership-check/" target="_blank">Join Check</a></li>
+              <li><a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/"
+                  target="_blank">Donate</a></li>
+              <li><a href="https://www.unitedconservative.ca/take-action/membership/" target="_blank">join</a></li>
+              <li><a href="https://www.unitedconservative.ca/strongandfreeclub/" target="_blank">Strong
+                  and Free Club</a></li>
+              <li><a href="https://www.unitedconservative.ca/membership-check/" target="_blank">Join
+                  Check</a></li>
               <li><a href="https://www.unitedconservative.ca/petitions/volunteer/" target="_blank">Volunteer</a></li>
               <li><a href="https://www.unitedconservative.ca/petitions/subscribe/" target="_blank">Subscribe</a></li>
             </ul>
           </li>
-          <li><a href="/events">Events</a></li>
-          <!-- Press Dropdown: Articles + Videos -->
+          <li><a href="events.html">Events</a></li>
+
+          <!-- RENAMED: Contact → Press (dropdown) -->
           <li>
             <a href="#">Press</a>
             <ul>
-              <li><a href="./news.html">Articles</a></li>
-              <li><a href="/press/videos">Videos</a></li>
+              <li><a href="news.html">Articles</a></li>
+              <li><a href="[news_videos].html">Videos</a></li>
             </ul>
           </li>
-          <!-- Join / Donate Buttons -->
+
+          <!-- RENAMED: Membership → Join -->
           <li>
             <a href="https://www.unitedconservative.ca/take-action/membership/" class="join" target="_blank">
               Join
             </a>
           </li>
           <li>
-            <a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/" class="donate" target="_blank">
+            <a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/" class="donate"
+              target="_blank">
               Donate
             </a>
           </li>
@@ -76,25 +80,31 @@
       <!-- Mobile Navigation -->
       <nav class="mobile-nav">
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/board-of-directors">Board of Directors</a></li>
-          <li><a href="/governance">Governance</a></li>
-          <li><a href="/news">News</a></li>
-          <li><a href="/events">Events</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="board-of-directors.html">Board of Directors</a></li>
+          <li><a href="governance.html">Governance</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="events.html">Events</a></li>
+
+          <!-- Contact → Press dropdown not typically shown in this older mobile approach,
+           but you could replicate if you wish. For simplicity, do a single link: -->
           <li>
             <a href="#">Press</a>
             <ul>
-              <li><a href="/press/articles">Articles</a></li>
-              <li><a href="/press/videos">Videos</a></li>
+              <li><a href="news.html">Articles</a></li>
+              <li><a href="[news_videos].html">Videos</a></li>
             </ul>
           </li>
+
+          <!-- Renamed membership to join -->
           <li>
             <a href="https://www.unitedconservative.ca/take-action/membership/" class="join" target="_blank">
               Join
             </a>
           </li>
           <li>
-            <a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/" class="donate" target="_blank">
+            <a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/" class="donate"
+              target="_blank">
               Donate
             </a>
           </li>
@@ -120,32 +130,32 @@
         <!-- Video 1 -->
         <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; padding: 1rem;">
           <!-- Replace with your actual YouTube embed code -->
-          <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_1" 
-                  frameborder="0" allowfullscreen></iframe>
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0"
+            allowfullscreen></iframe>
           <h3 style="margin: 0.5rem 0;">Video Title 1</h3>
           <p>A short description or snippet about this video.</p>
         </div>
 
         <!-- Video 2 -->
         <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; padding: 1rem;">
-          <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_2"
-                  frameborder="0" allowfullscreen></iframe>
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0"
+            allowfullscreen></iframe>
           <h3 style="margin: 0.5rem 0;">Video Title 2</h3>
           <p>A short description or snippet about this video.</p>
         </div>
 
         <!-- Video 3 -->
         <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; padding: 1rem;">
-          <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_3"
-                  frameborder="0" allowfullscreen></iframe>
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0"
+            allowfullscreen></iframe>
           <h3 style="margin: 0.5rem 0;">Video Title 3</h3>
           <p>A short description or snippet about this video.</p>
         </div>
 
         <!-- Video 4 -->
         <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; padding: 1rem;">
-          <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_4"
-                  frameborder="0" allowfullscreen></iframe>
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0"
+            allowfullscreen></iframe>
           <h3 style="margin: 0.5rem 0;">Video Title 4</h3>
           <p>A short description or snippet about this video.</p>
         </div>
@@ -153,7 +163,8 @@
 
       <!-- “Watch more on YouTube” Button + Party Logo -->
       <div style="margin: 2rem 0; text-align: center;">
-        <button style="background-color: #ed272a; color: #fff; padding: 0.75rem 1.5rem; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
+        <button
+          style="background-color: #ed272a; color: #fff; padding: 0.75rem 1.5rem; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
           Watch more on YouTube
         </button>
       </div>
@@ -215,16 +226,13 @@
     <div class="footer-container">
       <div class="footer-links">
         <ul class="bold-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/board-of-directors">About</a></li>
-          <li><a href="/events">Events</a></li>
-          <li><a href="/press/articles">Press</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="board-of-directors.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="news.html">Press</a></li>
         </ul>
         <ul class="regular-links">
-          <li>
-            <a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/">
-              Donate
-            </a>
+          <li><a href="https://www.unitedconservative.ca/take-action/donate/ca-donations-lethbridge-west/">Donate</a>
           </li>
           <li><a href="https://www.unitedconservative.ca/petitions/volunteer/">Volunteer</a></li>
           <li><a href="https://www.unitedconservative.ca/take-action/membership/">Join</a></li>
@@ -241,6 +249,7 @@
         <a href="https://www.facebook.com/p/United-Conservative-Party-Lethbridge-West-100068133120762/" target="_blank">
           <i class="fab fa-facebook-f"></i>
         </a>
+
         <!-- X (Twitter) -->
         <a href="https://twitter.com/Alberta_UCP" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" class="x-logo" x="0px" y="0px" viewBox="0 0 1200 1227">
@@ -248,10 +257,12 @@
               d="M714.2,519.3L1160.9,0H1055L667.1,450.9L357.3,0H0l468.5,681.8L0,1226.4h105.9l409.6-476.2l327.2,476.2H1200 L714.2,519.3L714.2,519.3z M569.2,687.8l-47.5-67.9L144,79.7h162.6l304.8,436l47.5,67.9l396.2,566.7H892.5L569.2,687.8L569.2,687.8z" />
           </svg>
         </a>
+
         <!-- Instagram -->
         <a href="https://www.instagram.com/ucplethwest/" target="_blank">
           <i class="fab fa-instagram"></i>
         </a>
+
         <!-- Rumble -->
         <a href="https://rumble.com/c/AlbertaUCP" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1441 1583" width="24" height="24">
@@ -260,6 +271,7 @@
             </path>
           </svg>
         </a>
+
         <!-- YouTube -->
         <a href="https://www.youtube.com/@unitedconservatives" target="_blank">
           <i class="fab fa-youtube"></i>
@@ -280,8 +292,8 @@
     </div>
   </footer>
 
-  <!-- Your JS -->
   <script src="script.js"></script>
   <script src="news.js"></script>
 </body>
+
 </html>
