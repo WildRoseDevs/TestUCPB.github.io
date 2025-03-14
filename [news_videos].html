@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Press: Article Name - UCP West-Lethbridge</title>
+  <title>Video Vault: Stay Informed - UCP Lethbridge-West</title>
   <link rel="icon" href="images/favicon.ico" type="image/ico" />
   <link rel="stylesheet" href="./css/index.css" />
   <link rel="stylesheet" href="./css/news.css" />
   <link rel="stylesheet" href="./css/responsive.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -35,7 +35,6 @@
             <ul>
               <li><a href="./board-of-directors.html">Board of Directors</a></li>
               <li><a href="./governance.html">Governance</a></li>
-              <li><a href="./united-conservative-party.html">United Conservative Party</a></li>
             </ul>
           </li>
           <li>
@@ -130,66 +129,72 @@
     </div>
   </header>
 
-  <!-- HERO SECTION: Override background from CSS -->
-  <section class="news-hero" style="background: url(./images/CGY-Leaders-Dinner-Event.jpg)">
+  <section class="news-hero">
     <div class="hero-content">
-      <h1>PRESS</h1>
-      <p class="tagline">{article_name}</p>
+      <h1>UCP Video Vault: Stay Informed</h1>
+      <p class="tagline">Speeches, Policy Updates, and Exclusive Insights from the UCP</p>
     </div>
   </section>
 
   <!-- 2-COLUMN LAYOUT -->
   <section class="news-container">
-    <!-- LEFT COLUMN: Paraphrased Article Content -->
     <div class="articles-list">
-      <article class="news-article" style="flex-direction: column;">
-        <!-- Title & Date -->
-        <h2>John Middleton-Hope Secures UCP Nomination for Lethbridge-West By-Election</h2>
-        <p style="font-style: italic; color: #555;">
-          September 24, 2024 – Lethbridge, AB
-        </p>
 
-        <!-- Paraphrased Body Text -->
-        <p>
-          In a decisive nomination vote, John Middleton-Hope has been chosen by the United Conservative Party (UCP) to
-          be
-          its official candidate for the upcoming by-election in Lethbridge-West. The seat opened up following the
-          recent
-          departure of the previous MLA, paving the way for a competitive race to represent the area in the Alberta
-          Legislature.
-        </p>
+      <!-- 2×2 Grid of Video Cards -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+        <!-- Video 1 -->
+        <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; padding: 1rem;">
+          <!-- Replace with your actual YouTube embed code -->
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0"
+            allowfullscreen></iframe>
+          <h3 style="margin: 0.5rem 0;">Video Title 1</h3>
+          <p>A short description or snippet about this video.</p>
+        </div>
 
-        <p>
-          Middleton-Hope, a longtime Lethbridge resident with a background in law enforcement, served as a city police
-          chief
-          and has also worked with the RCMP. He emphasizes community safety, economic development, and social well-being
-          as
-          central parts of his campaign platform, aiming to address a variety of local priorities.
-        </p>
+        <!-- Video 2 -->
+        <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; padding: 1rem;">
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0"
+            allowfullscreen></iframe>
+          <h3 style="margin: 0.5rem 0;">Video Title 2</h3>
+          <p>A short description or snippet about this video.</p>
+        </div>
 
-        <p>
-          “I’m incredibly honored by the confidence the party has placed in me,” Middleton-Hope remarked. “It’s a
-          privilege
-          to stand for the values of this riding, and I look forward to engaging with residents throughout the
-          campaign.”
-        </p>
+        <!-- Video 3 -->
+        <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; padding: 1rem;">
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0"
+            allowfullscreen></iframe>
+          <h3 style="margin: 0.5rem 0;">Video Title 3</h3>
+          <p>A short description or snippet about this video.</p>
+        </div>
 
-        <p>
-          While the exact date of the by-election has not yet been announced, observers anticipate a closely watched
-          race,
-          given Lethbridge-West’s history of spirited contests. Other political parties are expected to name their
-          candidates
-          soon, setting the stage for a dynamic campaign in the weeks ahead.
-        </p>
-      </article>
+        <!-- Video 4 -->
+        <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; padding: 1rem;">
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0"
+            allowfullscreen></iframe>
+          <h3 style="margin: 0.5rem 0;">Video Title 4</h3>
+          <p>A short description or snippet about this video.</p>
+        </div>
+      </div>
+
+      <!-- “Watch more on YouTube” Button + Party Logo -->
+      <div style="margin: 2rem 0; text-align: center;">
+        <button
+          style="background-color: #ed272a; color: #fff; padding: 0.75rem 1.5rem; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
+          Watch more on YouTube
+        </button>
+      </div>
+
+      <div style="text-align: center;">
+        <img src="images/subheadingplacehodler.png" alt="Party Logo" style="max-width: 300px; height: auto;">
+      </div>
     </div>
 
-    <!-- RIGHT COLUMN: Sidebar -->
+    <!-- RIGHT COLUMN: Sidebar (unchanged) -->
     <aside class="news-sidebar">
       <button onclick="scrollToContact()">Contact Us</button>
       <button>Press News</button>
-      <a href="news.html#articleWrapper">
-        <img src="images/Copy_of_Add_a_subheading__4_-removebg-preview.png" alt="Go to news section" class="press-link">
+      <a href="news.html">
+        <img src="images/aside-menu-logo.png" alt="Go to news section" class="press-link">
       </a>
       <h3>Get the Newsletter</h3>
       <form>
@@ -217,7 +222,7 @@
     </aside>
   </section>
 
-  <!-- CONTACT INFO -->
+  <!-- CONTACT INFO (unchanged) -->
   <section class="contact-info">
     <div>
       <i class="fas fa-building"></i>
@@ -228,14 +233,12 @@
       <i class="fas fa-envelope"></i>
       <h3>Email</h3>
       <p>
-        <a href="mailto:Lethbridge-West@unitedconservative.ca">
-          Lethbridge-West@unitedconservative.ca
-        </a>
+        <a href="mailto:Lethbridge-West@unitedconservative.ca">Lethbridge-West@unitedconservative.ca</a>
       </p>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (unchanged) -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
@@ -255,7 +258,7 @@
       </div>
 
       <div class="footer-logo">
-        <img src="images/Copy_of_Add_a_subheading__4_-removebg-preview.png" alt="Footer Logo" />
+        <img src="images/UCP-YouTube-TV.png" alt="Footer Logo" />
       </div>
 
       <div class="footer-social">
