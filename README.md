@@ -2,8 +2,6 @@
 
 - JavaScript required for:
   1. emailing api or other
-- New Pages needed + Linking: "Press Archive"
-- 
 - Linking & Images:
   1. Make YouTube image clickable to direct to UCP YT channel
   2. Insert new images for placeholders in hero and news articles
