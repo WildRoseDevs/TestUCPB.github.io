@@ -27,11 +27,11 @@
     z-index: 2;
 }
 .news-hero h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
 }
 .news-hero .tagline {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-style: italic;
     color: #f0f0f0;
 }
