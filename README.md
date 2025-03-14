@@ -15,3 +15,13 @@
 - Wear funky socks 🧦
 # _Awaiting More problems that need to be fixed_
 _Please insert new ones below:_
+
+# _Completed Pages_
+_Front-End Finished:_
+- Homepage
+- About:
+- 1. Board of Directors
+  2. Governance
+  3. United Conservative Party
+- Action Centre
+- Events
