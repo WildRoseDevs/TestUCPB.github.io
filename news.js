@@ -1,64 +1,181 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const articlesContainer = document.querySelector("#articleWrapper");
-    const loadMoreButton = document.querySelector("#loadMoreBtn");
+let initialLoad = 4;
+let loadIncrement = 2;
 
-    // All available articles (Stored in an array)
-    const allArticles = [
-        { category: "HEALTH", categoryClass: "health", title: "Health Initiative Update", image: "./images/Suport Alberta.jpg", description: "Lorem ipsum dolor sit amet...", link: "#" },
-        { category: "ECONOMY", categoryClass: "economy", title: "Economic Growth Prospects", image: "./images/Suport Alberta.jpg", description: "Lorem ipsum dolor sit amet...", link: "#" },
-//        { category: "GENERAL", categoryClass: "general", title: "Legislative Reform Bill", image: "./images/Suport Alberta.jpg", description: "Lorem ipsum dolor sit amet...", link: "#" },
-        { category: "GENERAL", categoryClass: "general", title: "John Middleton-Hope as Lethbridge-West UCP Candidate", image: "./images/Suport Alberta.jpg", description: "Lorem ipsum dolor sit amet...", link: "{article_name1}.html" },
-        { category: "SOCIAL", categoryClass: "social", title: "Community Outreach Program", image: "./images/Suport Alberta.jpg", description: "Lorem ipsum dolor sit amet...", link: "#" },
-        { category: "EDUCATION", categoryClass: "education", title: "Education Policy Update", image: "./images/Suport Alberta.jpg", description: "Lorem ipsum dolor sit amet...", link: "#" },
-        { category: "INFRASTRUCTURE", categoryClass: "infrastructure", title: "Infrastructure Development Plan", image: "./images/Suport Alberta.jpg", description: "Lorem ipsum dolor sit amet...", link: "#" },
-        { category: "ENVIRONMENT", categoryClass: "environment", title: "New Sustainability Measures", image: "./images/Suport Alberta.jpg", description: "Lorem ipsum dolor sit amet...", link: "#" },
-        { category: "TECHNOLOGY", categoryClass: "technology", title: "AI and Automation in Alberta", image: "./images/Suport Alberta.jpg", description: "Lorem ipsum dolor sit amet...", link: "#" }
-    ];
+// Tracks how many articles we've currently displayed
+let currentCount = 0;
 
-    let articlesLoaded = 0; // Start from 0
-    const articlesPerLoad = 2; // Load 2 articles per click
+// The articles array (9 total).
+// NOTE: Use YYYY-MM-DD so the month filter works properly.
+const articles = [
+    {
+        category: "HEALTH",
+        date: "2025-01-15",
+        title: "Health Initiative Update",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        thumbnail: "images/Suport Alberta.jpg"
+    },
+    {
+        category: "ECONOMY",
+        date: "2025-02-05",
+        title: "Economic Growth Prospects",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        thumbnail: "images/Suport Alberta.jpg"
+    },
+    {
+        category: "GENERAL",
+        date: "2025-02-20",
+        title: "John Middleton-Hope as Lethbridge–West UCP Candidate",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        thumbnail: "images/Suport Alberta.jpg"
+    },
+    {
+        category: "SOCIAL",
+        date: "2025-03-01",
+        title: "Community Outreach Program",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        thumbnail: "images/Suport Alberta.jpg"
+    },
+    {
+        category: "HEALTH",
+        date: "2025-01-10",
+        title: "New Healthcare Facility Opening",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        thumbnail: "images/Suport Alberta.jpg"
+    },
+    {
+        category: "ECONOMY",
+        date: "2025-03-18",
+        title: "Budget 2025 Announcement",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        thumbnail: "images/Suport Alberta.jpg"
+    },
+    {
+        category: "GENERAL",
+        date: "2025-01-25",
+        title: "Town Hall Q&A Session",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        thumbnail: "images/Suport Alberta.jpg"
+    },
+    {
+        category: "SOCIAL",
+        date: "2025-02-10",
+        title: "Community Sports Funding",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        thumbnail: "images/Suport Alberta.jpg"
+    },
+    {
+        category: "ECONOMY",
+        date: "2025-03-27",
+        title: "Small Business Grants",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        thumbnail: "images/Suport Alberta.jpg"
+    }
+];
 
-    // Function to insert articles dynamically
-    function renderArticles(startIndex, endIndex) {
-        for (let i = startIndex; i < endIndex && i < allArticles.length; i++) {
-            const article = allArticles[i];
+// The array we actually render might be filtered by month
+let filteredArticles = [...articles];
 
-            const articleElement = document.createElement("article");
-            articleElement.classList.add("news-article");
+/**
+ * Render articles into #articleWrapper. 
+ * If clear=true, reset from scratch (used when filtering).
+ */
+function renderArticles(arr, clear = true) {
+    const wrapper = document.getElementById("articleWrapper");
+    if (!wrapper) return;
 
-            articleElement.innerHTML = `
-                <div class="article-image">
-                    <img src="${article.image}" alt="${article.category}" />
-                </div>
-                <div class="article-content">
-                    <h3 class="category ${article.categoryClass}">${article.category}</h3>
-                    <h2 class="article-title">${article.title}</h2>
-                    <p>
-                        ${article.description}
-                        <a href="${article.link}" class="read-more">[...]</a>
-                    </p>
-                </div>
-            `;
-
-            articlesContainer.appendChild(articleElement);
-        }
+    // If we're clearing, reset the container & counters
+    if (clear) {
+        wrapper.innerHTML = "";
+        currentCount = 0;
     }
 
-    // Load the first 4 articles automatically when the page loads
-    renderArticles(0, 4);
-    articlesLoaded = 4;
+    // If we are starting fresh (clear=true), show initialLoad.
+    // Otherwise, show loadIncrement more.
+    const numToShow = (currentCount === 0) ? initialLoad : loadIncrement;
+    const endIndex = currentCount + numToShow;
 
-    // Load more articles when the button is clicked
-    loadMoreButton.addEventListener("click", function () {
-        renderArticles(articlesLoaded, articlesLoaded + articlesPerLoad);
-        articlesLoaded += articlesPerLoad;
+    for (let i = currentCount; i < endIndex && i < arr.length; i++) {
+        const art = arr[i];
 
-        // Hide button if all articles are loaded
-        if (articlesLoaded >= allArticles.length) {
-            loadMoreButton.style.display = "none";
+        // Create the DOM element for each article
+        const articleDiv = document.createElement("div");
+        articleDiv.classList.add("news-article");
+
+        // Category + date in one line
+        // The "category" might get color from .health, .economy, .social, etc.
+        // We add a <span> for the date with a "article-date" class
+        articleDiv.innerHTML = `
+      <div class="article-image">
+        <img src="${art.thumbnail}" alt="${art.title}" />
+      </div>
+      <div class="article-content">
+        <p class="category ${art.category.toLowerCase()}">
+          ${art.category}
+          <span class="article-date">${art.date}</span>
+        </p>
+        <h2 class="article-title">${art.title}</h2>
+        <p>${art.description}</p>
+      </div>
+    `;
+
+        wrapper.appendChild(articleDiv);
+    }
+
+    currentCount += numToShow;
+
+    // If we've displayed everything, hide "Load More" button
+    const loadMoreBtn = document.getElementById("loadMoreBtn");
+    if (loadMoreBtn) {
+        if (currentCount >= arr.length) {
+            loadMoreBtn.style.display = "none";
+        } else {
+            loadMoreBtn.style.display = "inline-block";
         }
+    }
+}
+
+// Handle the loadMore button
+const loadMoreBtn = document.getElementById("loadMoreBtn");
+if (loadMoreBtn) {
+    loadMoreBtn.addEventListener("click", function () {
+        renderArticles(filteredArticles, false);
     });
-});
+}
+
+/**
+ * Filter by month (January, February, March) 
+ * and re-render from scratch.
+ */
+function handleMonthChange() {
+    const monthSelect = document.getElementById("select-month");
+    if (!monthSelect) return;
+
+    const selectedMonth = monthSelect.value; // e.g. "January", "February", "March"
+
+    // Filter articles that match the selected month
+    filteredArticles = articles.filter(art => {
+        // Convert art.date (YYYY-MM-DD) to a JS Date
+        const d = new Date(art.date);
+        const monthNames = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+        const articleMonthName = monthNames[d.getMonth()];
+        return articleMonthName === selectedMonth;
+    });
+
+    // Re-render the filtered array (first 4, then 2, etc.)
+    renderArticles(filteredArticles);
+}
+
+// Listen for changes on the dropdown
+const monthSelect = document.getElementById("select-month");
+if (monthSelect) {
+    monthSelect.addEventListener("change", handleMonthChange);
+}
+
+// Initial load: show all articles (first 4)
+renderArticles(articles);
 
 
 function scrollToContact() {
